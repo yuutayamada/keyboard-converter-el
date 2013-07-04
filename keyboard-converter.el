@@ -95,8 +95,4 @@
         do   (define-key keymap converted-key func)
         else do (global-set-key converted-key func)))
 
-;; Test
-;; (equal (kbd (keyboard-converter-find "C-@"))
-;;        (kbd "C-\""))
-
 (provide 'keyboard-converter)
