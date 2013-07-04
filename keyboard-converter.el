@@ -58,9 +58,14 @@
     ;; ("@" . "[")
     ))
 
+(defvar keyboard-converter-user-alist
+  keyboard-converter-109:104-keyboard-alist
+  "user specifies default keyboard alist, by default it is specified
+`keyboard-converter-109:104-keyboard-alist'")
+
 (defun keyboard-converter-find (key  &optional keyboard)
   (cl-loop
-   for (from . to) in (or keyboard keyboard-converter-104:109-keyboard-alist)
+   for (from . to) in (or keyboard keyboard-converter-user-alist)
    if (string-match from key)
    do (return (replace-regexp-in-string from to key))
    finally return (message key)))
