@@ -32,10 +32,12 @@
     ("+" . "~")
     ("\\[" . "@")
     ("{" . "`")
-    ("]" . "[")
     ("}" . "{")
     (":" . "+")
-    ("`" . "*")))
+    ("`" . "*")
+    ;; Comment out, Because Emacs evaluate "[" as ESC
+    ;; ("]" . "[")
+    ))
 
 (defvar keyboard-converter-109:104-keyboard-alist
   '(("\"" . "@")
@@ -46,13 +48,15 @@
     ("=" . "_")
     ("\\^" . "=")
     ("~" . "+")
-    ("@" . "[")
     ("`" . "{")
     ("\\[" . "]")
     ("{" . "}")
     ("+" . ":")
     (":" . "'")
-    ("*" . "`")))
+    ("*" . "`")
+    ;; Comment out, Because Emacs evaluate "[" as ESC
+    ;; ("@" . "[")
+    ))
 
 (defun keyboard-converter-find (key  &optional keyboard)
   (cl-loop
