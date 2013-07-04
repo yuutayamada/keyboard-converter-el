@@ -19,6 +19,20 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+;;; Usage
+;; When you use 109 keyboard then you are using 104 keybind on Emacs,
+;; If you want to use 109 keybind of same position.
+;; You can specify below code
+;; (let*
+;;     ((mykeybinds
+;;       '(("C-+" text-scale-increase)
+;;         ;; you can add more keybinds
+;;         )))
+;;   (keyboard-converter-setup-keybinds
+;;    mykeybinds nil keyboard-converter-109:104-keyboard-alist))
+;; the "C-+" is defined as "C-:"
+;; i.e. above code is same: (global-set-key (kbd "C-:") 'text-scale-increase)
+
 (eval-when-compile (require 'cl))
 
 (defvar keyboard-converter-104:109-keyboard-alist
