@@ -66,7 +66,7 @@
    finally return (message key)))
 
 (defun keyboard-converter-setup-keybinds (key-and-func-alist
-                                         &optional keymap keyboard-alist)
+                                          &optional keymap keyboard-alist)
   (loop for (key function) in key-and-func-alist
         for func = (if function
                        function
